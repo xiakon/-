@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>用户登录页面</title>
+</head>
+<body>
+
+<form onsubmit="return check(this)" action="">
+账号：<input type=text name=user><p>
+密码：<input type=password name=pw size=20><p>
+<input type=submit value=登录>
+</form>
+	
+<script language=javascript>
+function check(f)
+{
+	if(f.user.value=="")
+	{
+		alert("请输入账号");
+		f.user.focus();
+		return false;
+	}
+	if(f.pw.value=="")
+	{
+		alert("请输入密码");
+		f.pw.focus();
+		return false;
+	}
+        if(f.user.value=="123",f.pw.value=="123")
+	{
+		alert("登录成功，欢迎登陆！");
+                f.user.focus()
+		f.pw.focus();
+		return false;
+	}else
+        {
+                f.user.value="";
+                f.pw.value="";
+        }
+	return false;
+}
+</script>
+
+</body>
+</html>
